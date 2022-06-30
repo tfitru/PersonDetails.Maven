@@ -10,8 +10,21 @@ public class PersonHandler {
         this.personArray = personArray;
     }
 
+
+
+
+
     public String whileLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+
+        int counter = 0;
+        while(counter<personArray.length) {
+           String x = String.valueOf(personArray[counter]);
+           result.append(x);
+           counter++;
+        }
+
+
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -21,16 +34,23 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
+        return result.toString();
     }
 
 
 
     public String forLoop() {
-        String result = "";
-        // identify initial value
-        // identify terminal condition
-        // identify increment
+        StringBuilder result = new StringBuilder();
+        int counter;
+
+        // identify initial value i
+        // identify terminal condition what ever is at the end of the < sign
+        // identify increment i++
+
+        for(counter = 0; counter<personArray.length; counter++) {
+            String x = String.valueOf(personArray[counter]);
+            result.append(x);
+        }
 
         // use the above clauses to declare for-loop signature
             // begin loop
@@ -39,15 +59,21 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return result.toString();
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
+
         // identify array's type
         // identify array's variable-name
+        for(Person counter: personArray){
+            result.append(counter);
+
+        }
+
 
         // use the above discoveries to declare for-each-loop signature
             // begin loop
@@ -55,7 +81,7 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+        return result.toString();
     }
 
 
